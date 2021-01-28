@@ -6,7 +6,7 @@
 /*   By: jbarette <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/28 14:48:18 by jbarette          #+#    #+#             */
-/*   Updated: 2021/01/28 14:48:22 by jbarette         ###   ########.fr       */
+/*   Updated: 2021/01/28 14:57:33 by jbarette         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlen(const char *s)
 	i = 0;
 	if (!s)
 		return (0);
-	while(s[i] != '\0')
+	while (s[i] != '\0')
 		i++;
 	return (i);
 }
@@ -66,14 +66,14 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (rtn);
 }
 
-int	has_return(char *str)
+int		has_return(char *str)
 {
 	int	i;
 
 	i = 0;
 	if (!str)
 		return (0);
-	while(str[i])
+	while (str[i])
 	{
 		if (str[i] == '\n')
 			return (1);

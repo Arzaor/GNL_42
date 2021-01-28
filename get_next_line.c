@@ -6,7 +6,7 @@
 /*   By: jbarette <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/28 14:47:19 by jbarette          #+#    #+#             */
-/*   Updated: 2021/01/28 14:47:35 by jbarette         ###   ########.fr       */
+/*   Updated: 2021/01/28 14:55:36 by jbarette         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*get_save(char *save)
 {
 	char	*rtn;
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 
 	i = 0;
 	j = 0;
@@ -41,7 +41,7 @@ char	*get_save(char *save)
 
 char	*get_line(char *str)
 {
-	int	i;
+	int		i;
 	char	*rtn;
 
 	i = 0;
@@ -49,10 +49,10 @@ char	*get_line(char *str)
 		return (0);
 	while (str[i] && str[i] != '\n')
 		i++;
-	if(!(rtn = malloc(sizeof(char) * (i + 1))))
+	if (!(rtn = malloc(sizeof(char) * (i + 1))))
 		return (0);
 	i = 0;
-	while(str[i] && str[i] != '\n')
+	while (str[i] && str[i] != '\n')
 	{
 		rtn[i] = str[i];
 		i++;
@@ -61,12 +61,11 @@ char	*get_line(char *str)
 	return (rtn);
 }
 
-
-int	get_next_line(int fd, char **line)
+int		get_next_line(int fd, char **line)
 {
 	char		*buff;
 	static char	*save;
-	int		reader;
+	int			reader;
 
 	reader = 1;
 	if (fd < 0 || !line || BUFFER_SIZE <= 0)
@@ -88,6 +87,5 @@ int	get_next_line(int fd, char **line)
 	save = get_save(save);
 	if (reader == 0)
 		return (0);
-
 	return (1);
-}	
+}
