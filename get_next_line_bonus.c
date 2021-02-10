@@ -6,11 +6,11 @@
 /*   By: jbarette <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 08:56:43 by jbarette          #+#    #+#             */
-/*   Updated: 2021/02/10 10:45:57 by jbarette         ###   ########.fr       */
+/*   Updated: 2021/02/10 10:38:40 by jbarette         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*save_all(char *save)
 {
@@ -63,7 +63,7 @@ char	*ft_puts_line(char *str)
 
 int		get_next_line(int fd, char **line)
 {
-	static char *save;
+	static char *save[4096];
 	char		*buff;
 	int			open;
 
@@ -72,7 +72,7 @@ int		get_next_line(int fd, char **line)
 		return (-1);
 	if (!(buff = malloc(sizeof(char) * (BUFFER_SIZE + 1))))
 		return (-1);
-	while (!has_return(save) && open != 0)
+	while (!has_return(save[fd]) && open != 0)
 	{
 		if ((open = read(fd, buff, BUFFER_SIZE)) == -1)
 		{
@@ -80,11 +80,11 @@ int		get_next_line(int fd, char **line)
 			return (-1);
 		}
 		buff[open] = '\0';
-		save = ft_strjoin(save, buff);
+		save[fd] = ft_strjoin(save[fd], buff);
 	}
 	free(buff);
-	*line = ft_puts_line(save);
-	save = save_all(save);
+	*line = ft_puts_line(save[fd]);
+	save[fd] = save_all(save[fd]);
 	if (open == 0)
 		return (0);
 	return (1);

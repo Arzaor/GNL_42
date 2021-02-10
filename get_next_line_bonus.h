@@ -6,12 +6,12 @@
 /*   By: jbarette <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 08:56:55 by jbarette          #+#    #+#             */
-/*   Updated: 2021/02/10 10:46:05 by jbarette         ###   ########.fr       */
+/*   Updated: 2021/02/10 10:47:43 by jbarette         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 
 # include <fcntl.h>
 # include <stdlib.h>

@@ -6,11 +6,11 @@
 /*   By: jbarette <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 11:09:15 by jbarette          #+#    #+#             */
-/*   Updated: 2021/02/09 15:09:36 by jbarette         ###   ########.fr       */
+/*   Updated: 2021/02/10 10:21:17 by jbarette         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 int		ft_strlen(char const *str)
 {
