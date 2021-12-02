@@ -4,3 +4,4 @@ Que ce soit un fichier, stdin, ou même plus tard une connexion réseau, vous au
 
 ## Resultat
 
+![Resultat](https://user-images.githubusercontent.com/6265441/144424928-7a30dc15-a4c7-41d1-b151-b812f35cd088.png)
